@@ -57,15 +57,15 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Sidebar Inputs
+# Sidebar Inputs (In Kg instead of Kg/m³)
 st.sidebar.header("🔧 Input Mix Details")
-cement = st.sidebar.number_input("Cement (kg/m³)", min_value=0.0, value=540.0)
-slag = st.sidebar.number_input("Blast Furnace Slag (kg/m³)", min_value=0.0, value=0.0)
-fly_ash = st.sidebar.number_input("Fly Ash (kg/m³)", min_value=0.0, value=0.0)
-water = st.sidebar.number_input("Water (kg/m³)", min_value=0.0, value=162.0)
-superplasticizer = st.sidebar.number_input("Superplasticizer (kg/m³)", min_value=0.0, value=2.5)
-coarse_agg = st.sidebar.number_input("Coarse Aggregate (kg/m³)", min_value=0.0, value=1040.0)
-fine_agg = st.sidebar.number_input("Fine Aggregate (kg/m³)", min_value=0.0, value=676.0)
+cement = st.sidebar.number_input("Cement (kg)", min_value=0.0, value=540.0)  # In kg
+slag = st.sidebar.number_input("Blast Furnace Slag (kg)", min_value=0.0, value=0.0)  # In kg
+fly_ash = st.sidebar.number_input("Fly Ash (kg)", min_value=0.0, value=0.0)  # In kg
+water = st.sidebar.number_input("Water (kg)", min_value=0.0, value=162.0)  # In kg
+superplasticizer = st.sidebar.number_input("Superplasticizer (kg)", min_value=0.0, value=2.5)  # In kg
+coarse_agg = st.sidebar.number_input("Coarse Aggregate (kg)", min_value=0.0, value=1040.0)  # In kg
+fine_agg = st.sidebar.number_input("Fine Aggregate (kg)", min_value=0.0, value=676.0)  # In kg
 age = st.sidebar.number_input("Age (days)", min_value=1, value=28)
 
 # Predict Button
